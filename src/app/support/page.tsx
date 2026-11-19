@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { faq, support } from "@/lib/content";
 import { site } from "@/config/site";
+import CopyEmail from "@/components/CopyEmail";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -51,9 +52,7 @@ export default function SupportPage() {
             </a>
           </div>
           <div className="lg:col-span-5 lg:text-right">
-            <a href={mailto} className="btn">
-              Email support
-            </a>
+            <CopyEmail email={site.supportEmail} />
           </div>
         </div>
       </header>
