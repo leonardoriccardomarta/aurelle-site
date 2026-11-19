@@ -9,6 +9,6 @@ export const site = {
   name: "Aurelle Studio",
   theme: "Aurelle",
   version: "1.0.0",
-  url: "https://example.com",
-  supportEmail: "support@example.com",
+  url: "https://aurelletheme.com",
+  supportEmail: "support@aurelletheme.com",
 } as const;

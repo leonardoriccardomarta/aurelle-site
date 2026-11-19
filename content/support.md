@@ -5,7 +5,7 @@ Direct, human support for every Aurelle customer.
 ## How to get help
 
 - Read the documentation first. Most questions are answered there.
-- Contact support: **FILL IN: support email address**
+- Contact support: support@aurelletheme.com
 - Typical response time: within 1–2 business days (24–48 hours).
 - Support hours: Monday–Friday, 9:00–18:00 CET (UTC+1).
 - Support language: English.
