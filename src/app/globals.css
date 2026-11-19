@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+/*
+  Art direction: the "Quiet Luxury" preset of the Aurelle theme, reproduced exactly.
+  Palette, typefaces, scale, line height, button and eyebrow styles come from presets/quiet-luxury.json and the theme's
+  base.css. Cream and black, hairline borders, sharp corners, generous whitespace, almost no motion.
+*/
+
+:root {
+  /* Palette (preset values) */
+  --background: #fbf8f4;
+  --surface: #f3ece4;
+  --accent: #e6d9c6;
+  --foreground: #1a1816;
+  --muted: #5e564e;
+  --line: #ddd3c6;
+
+  /* Spacing scale (theme: --space-1 ... --space-8) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* "Spacious" section spacing: the theme's section spacing x 1.35 */
+  --gutter: var(--space-4);
+  --section: calc(var(--space-7) * 1.35);
+  --page-width: 87.5rem; /* 1400px, as in the preset */
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration: 0.3s;
+}
+
+@media (min-width: 750px) {
+  :root {
+    --gutter: var(--space-6);
+    --section: calc(var(--space-8) * 1.35);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-heading: var(--font-cormorant), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-assistant), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Element defaults live in the base layer so Tailwind's utility classes can override them (unlayered rules would win). */
+@layer base {
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.8; /* "relaxed" body line height of the preset */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings: Cormorant Garamond, preset scale x1.10, 0.01em tracking. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: calc(clamp(2rem, 1.5rem + 2.5vw, 3.5rem) * 1.1);
+}
+
+h2 {
+  font-size: calc(clamp(1.625rem, 1.3rem + 1.6vw, 2.5rem) * 1.1);
+}
+
+h3 {
+  font-size: calc(clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem) * 1.1);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+}
+
+/* ------------------------------------------------------------------------------------------ building blocks */
+
+@layer components {
+.page-width {
+  width: 100%;
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+/* Theme eyebrow: small, bold, tracked, uppercase, muted. */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Theme button: sharp corners, uppercase, 0.12em tracking, 44px touch target. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity var(--duration) var(--ease), background-color var(--duration) var(--ease),
+    color var(--duration) var(--ease);
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn--quiet {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.btn--quiet:hover {
+  background: var(--foreground);
+  color: var(--background);
+  opacity: 1;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.link:hover {
+  opacity: 0.65;
+}
+
+/* Hairline-ruled list used for specifications and scope lists. */
+.ruled > li {
+  border-top: 1px solid var(--line);
+}
+
+.ruled > li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: -4rem;
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: var(--space-3);
+}
+
+/* ------------------------------------------------------------------------------------------ documentation prose */
+
+.docs-prose {
+  max-width: 44rem;
+  font-size: 1.0625rem;
+}
+
+.docs-prose > * + * {
+  margin-top: var(--space-4);
+}
+
+.docs-prose p {
+  color: var(--foreground);
+}
+
+.docs-prose strong {
+  font-weight: 600;
+}
+
+.docs-prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.docs-prose ul,
+.docs-prose ol {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.docs-prose ul > li {
+  position: relative;
+  padding-inline-start: var(--space-5);
+}
+
+/* A short hairline instead of a bullet. */
+.docs-prose ul > li::before {
+  content: "";
+  position: absolute;
+  top: 0.95em;
+  left: 0;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--muted);
+}
+
+.docs-prose ol {
+  counter-reset: item;
+}
+
+.docs-prose ol > li {
+  position: relative;
+  padding-inline-start: var(--space-6);
+  counter-increment: item;
+}
+
+.docs-prose ol > li::before {
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.docs-prose code {
+  padding: 0.1em 0.4em;
+  background: var(--surface);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+.docs-prose h3 {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: var(--space-5);
+  -webkit-overflow-scrolling: touch;
+}
+
+.docs-prose table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.docs-prose th {
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  border-bottom: 1px solid var(--foreground);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.docs-prose td {
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.docs-prose td:first-child {
+  min-width: 9rem;
+  font-weight: 600;
+}
+
+/* Section anchors land below the top edge. */
+[id] {
+  scroll-margin-top: var(--space-6);
+}
+
+}
