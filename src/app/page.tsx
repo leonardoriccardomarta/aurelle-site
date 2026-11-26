@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { sectionCount, support } from "@/lib/content";
-import { presets } from "@/lib/presets";
+import { themeStyle } from "@/lib/presets";
 import { site } from "@/config/site";
 
-/* Every claim below is taken from docs/documentation.md. Counts and preset descriptions are read from it. */
+/* Every claim below is taken from docs/documentation.md. Counts and the style description are read from it. */
 
 const included = [
   {
@@ -35,7 +35,7 @@ const included = [
 const spec = [
   ["Platform", "Shopify Online Store 2.0"],
   ["Version", site.version],
-  ["Presets", String(presets.length)],
+  ["Style", themeStyle.name],
   ["Sections", String(sectionCount)],
   ["Language", "English"],
 ];
@@ -55,8 +55,8 @@ export default function HomePage() {
               For brands that prefer <em className="italic">restraint</em>.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted md:text-xl md:leading-9">
-              Aurelle is a minimal, high-luxury theme. It installs complete, then changes character in one click with a
-              preset, and your content stays exactly as you wrote it.
+              Aurelle is a minimal, high-luxury theme. It installs complete and ready to style, in a clean clinical
+              look, and your content stays exactly as you wrote it.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link href="/docs" className="btn">
@@ -89,8 +89,8 @@ export default function HomePage() {
               the first product is added.
             </h2>
             <p className="mt-8 max-w-2xl text-lg text-muted">
-              The default homepage is a neutral base on purpose: its wording works with every preset, so you can switch
-              presets at any time without rewriting anything.
+              The default homepage is a neutral base on purpose: its wording works for any skincare brand, so you can
+              restyle the theme at any time without rewriting anything.
             </p>
           </div>
         </div>
@@ -117,57 +117,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------------------------------ presets */}
-      <section className="border-t border-line bg-surface" aria-labelledby="presets-title">
+      {/* ------------------------------------------------------------------------------------------ style */}
+      <section className="border-t border-line bg-surface" aria-labelledby="style-title">
         <div className="page-width section">
           <div className="grid gap-6 lg:grid-cols-12 lg:gap-10">
-            <p className="eyebrow lg:col-span-3">03 &mdash; Presets</p>
+            <p className="eyebrow lg:col-span-3">03 &mdash; Style</p>
             <div className="lg:col-span-9">
-              <h2 id="presets-title" className="max-w-[24ch] text-[clamp(1.75rem,1.1rem+2.6vw,3.25rem)] leading-[1.18]">
-                Three presets. One click each.
+              <h2 id="style-title" className="max-w-[24ch] text-[clamp(1.75rem,1.1rem+2.6vw,3.25rem)] leading-[1.18]">
+                One considered style, ready on install.
               </h2>
               <p className="mt-6 max-w-xl text-muted">
-                A preset restyles colors, fonts, buttons, corners and spacing. It does not touch your content.
+                Colors, fonts, buttons, corners and spacing are all settings. Changing them never touches your content.
               </p>
             </div>
           </div>
 
-          <ol className="mt-14 md:mt-20">
-            {presets.map((preset, index) => (
-              <li key={preset.name} className="border-t border-line py-10 first:border-t-foreground md:py-14">
-                <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-                  <div className="lg:col-span-5">
-                    <p className="eyebrow">{String(index + 1).padStart(2, "0")}</p>
-                    <h3 className="mt-3 text-[clamp(2rem,1.2rem+3.4vw,3.75rem)] leading-[1.05]">{preset.name}</h3>
-                  </div>
-                  <div className="lg:col-span-4">
-                    <p className="text-[0.9375rem]">{preset.look}.</p>
-                    <p className="mt-4 text-[0.9375rem] text-muted">
-                      <span className="eyebrow mr-2">Best for</span>
-                      {preset.bestFor}
-                    </p>
-                    <p className="mt-2 text-[0.9375rem] text-muted">
-                      <span className="eyebrow mr-2">Type</span>
-                      {preset.typefaces}
-                    </p>
-                  </div>
-                  <ul className="flex gap-3 lg:col-span-3 lg:justify-end" aria-label={`${preset.name} palette`}>
-                    {preset.palette.map((swatch) => (
-                      <li key={swatch.hex} className="w-full max-w-14">
-                        <span
-                          className="block aspect-[3/4] border border-line"
-                          style={{ backgroundColor: swatch.hex }}
-                          role="img"
-                          aria-label={`${swatch.name} ${swatch.hex}`}
-                        />
-                        <span className="mt-2 block text-[0.625rem] tracking-[0.08em] text-muted">{swatch.hex}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-14 border-t border-foreground py-10 md:mt-20 md:py-14">
+            <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+              <div className="lg:col-span-5">
+                <p className="eyebrow">Included style</p>
+                <h3 className="mt-3 text-[clamp(2rem,1.2rem+3.4vw,3.75rem)] leading-[1.05]">{themeStyle.name}</h3>
+              </div>
+              <div className="lg:col-span-4">
+                <p className="text-[0.9375rem]">{themeStyle.look}.</p>
+                <p className="mt-4 text-[0.9375rem] text-muted">
+                  <span className="eyebrow mr-2">Best for</span>
+                  {themeStyle.bestFor}
+                </p>
+                <p className="mt-2 text-[0.9375rem] text-muted">
+                  <span className="eyebrow mr-2">Type</span>
+                  {themeStyle.typefaces}
+                </p>
+              </div>
+              <ul className="flex gap-3 lg:col-span-3 lg:justify-end" aria-label={`${themeStyle.name} palette`}>
+                {themeStyle.palette.map((swatch) => (
+                  <li key={swatch.hex} className="w-full max-w-14">
+                    <span
+                      className="block aspect-[3/4] border border-line"
+                      style={{ backgroundColor: swatch.hex }}
+                      role="img"
+                      aria-label={`${swatch.name} ${swatch.hex}`}
+                    />
+                    <span className="mt-2 block text-[0.625rem] tracking-[0.08em] text-muted">{swatch.hex}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

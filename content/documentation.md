@@ -1,25 +1,23 @@
 # Aurelle: theme documentation
 
-Aurelle is a minimal, high-luxury Online Store 2.0 theme for premium skincare and beauty brands. It installs with a complete, neutral homepage and footer, and three presets (Quiet Luxury, Clinical Skincare, Botanical & Organic) that restyle everything in one click.
+Aurelle is a minimal, high-luxury Online Store 2.0 theme for premium skincare and beauty brands. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
 
 ## 1. Getting started
 
 1. Add the theme to your store (upload the theme file, or install it from the Theme Store) and open **Customize**.
-2. Choose a preset in the theme editor (Theme settings, theme style). A preset changes colors, fonts, buttons, corners and spacing. It does not change your content.
+2. The theme installs with the Clinical Skincare style already applied. To adjust the colors, fonts, buttons, corners or spacing, open Theme settings (see "Theme settings" below). Changing the style never changes your content.
 3. Add your logo, then replace the placeholder images in the homepage sections.
 4. Check your navigation menus (see "Navigation") and the sections listed in "Before you launch" at the end of this page.
 
-The homepage is a neutral base on purpose: its wording works with every preset, so you can switch presets at any time without rewriting anything.
+The homepage is a neutral base on purpose: its wording works for any skincare brand, so you can restyle the theme at any time without rewriting anything.
 
-## 2. Presets
+## 2. Style
 
-| Preset | Look | Best for |
+| Style | Look | Best for |
 |---|---|---|
-| Quiet Luxury | Cream, black and beige, elegant serif, generous whitespace, sharp corners | Premium cosmetics brands |
 | Clinical Skincare | White, cool grey and pastel blue, technical sans-serif, compact spacing | Dermatological and pharmacy-grade skincare |
-| Botanical & Organic | Warm earth, sage and olive, natural serif, soft rounded corners | Organic and plant-based beauty |
 
-Two alternative homepage layouts are included as templates, `index.clinical` and `index.botanical`, with copy and section order suited to those niches. Preview them by adding `?view=clinical` or `?view=botanical` to your homepage address. Copy a layout into the default homepage if you want to use it.
+One alternative homepage layout is included as a template, `index.clinical`, with copy and section order suited to dermatological skincare. Preview it by adding `?view=clinical` to your homepage address. Copy the layout into the default homepage if you want to use it.
 
 ## 3. Homepage and section library
 

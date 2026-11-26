@@ -3,12 +3,12 @@
 Landing page, documentation and support for the **Aurelle** Shopify theme (Aurelle Studio).
 Next.js (App Router) · TypeScript · Tailwind CSS. Every page is prerendered as static HTML, with no demo-store links.
 
-The art direction is the theme's **Quiet Luxury** preset: cream and black, Cormorant Garamond headings, Assistant body,
+The art direction of the site: cream and black, Cormorant Garamond headings, Assistant body,
 hairline borders, sharp corners, generous whitespace.
 
 | Route      | What it is                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------------ |
-| `/`        | Editorial landing: the theme, what is included, the three presets, links to docs / support |
+| `/`        | Editorial landing: the theme, what is included, the Clinical Skincare style, links to docs / support |
 | `/docs`    | Full documentation, sticky sidebar, scroll-spy, search, changelog at the bottom            |
 | `/support` | Email, hours, response time, what is and is not covered, FAQ                               |
 

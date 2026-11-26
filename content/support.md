@@ -14,7 +14,7 @@ Direct, human support for every Aurelle customer.
 
 - Questions about how the theme's features and settings work.
 - Bugs in the theme as delivered.
-- Help applying a preset.
+- Help with the theme's style and settings.
 
 ## What is not covered
 

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { site } from "@/config/site";
 
-// The two typefaces of the Quiet Luxury preset. Self-hosted by next/font: no request to Google at runtime.
+// The two typefaces of the site (Cormorant Garamond for headings, Assistant for text). Self-hosted by next/font: no request to Google at runtime.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400"],
@@ -21,7 +21,7 @@ const assistant = Assistant({
 });
 
 const description =
-  "Aurelle is a minimal, high-luxury Shopify theme for premium skincare and beauty brands. Complete on install, restyled in one click with three presets.";
+  "Aurelle is a minimal, high-luxury Shopify theme for premium skincare and beauty brands. Complete on install, in a clean Clinical Skincare style that stays fully editable.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

@@ -139,8 +139,8 @@ const troubleshootingFaq = bullets((troubleshooting as { body: string }).body).m
   return { question, answer: sentence(answer.trim()) };
 });
 
-const presetsLine = documentation.match(/you can switch presets at any time without rewriting anything/);
-if (!presetsLine) fail("documentation.md no longer says presets can be switched without rewriting content");
+const restyleLine = documentation.match(/you can restyle the theme at any time without rewriting anything/);
+if (!restyleLine) fail("documentation.md no longer says the theme can be restyled without rewriting content");
 
 export const faq = [
   {
@@ -152,9 +152,9 @@ export const faq = [
     answer: `${support.include.join(" ")}`,
   },
   {
-    question: "Can I switch presets later without rewriting my content?",
+    question: "Can I restyle the theme later without rewriting my content?",
     answer:
-      "Yes. The default homepage is a neutral base on purpose: its wording works with every preset, so you can switch presets at any time without rewriting anything.",
+      "Yes. The default homepage is a neutral base on purpose: its wording works for any skincare brand, so you can restyle the theme at any time without rewriting anything.",
   },
   {
     question: "Where do I find the theme version?",
@@ -179,15 +179,15 @@ const tableRows = (body: string) =>
     .filter((cells) => !cells.every((cell) => /^[-:\s]*$/.test(cell)))
     .slice(1); // drop the header row
 
-const presetsSection = docsRaw.find((section) => section.heading.toLowerCase().includes("presets"));
-if (!presetsSection) fail("documentation.md has no Presets section");
+const styleSection = docsRaw.find((section) => /^(\d+\.\s*)?style$/i.test(section.heading.trim()));
+if (!styleSection) fail("documentation.md has no Style section");
 
-export const presetRows = tableRows((presetsSection as { body: string }).body).map(([name, look, bestFor]) => ({
+export const styleRows = tableRows((styleSection as { body: string }).body).map(([name, look, bestFor]) => ({
   name,
   look,
   bestFor,
 }));
-if (presetRows.length !== 3) fail(`expected 3 presets in the docs table, found ${presetRows.length}`);
+if (styleRows.length !== 1) fail(`expected 1 style in the docs table, found ${styleRows.length}`);
 
 const librarySection = docsRaw.find((section) => section.heading.toLowerCase().includes("section library"));
 if (!librarySection) fail("documentation.md has no section library table");

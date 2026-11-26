@@ -5,7 +5,7 @@ import { docs } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "The complete Aurelle documentation: presets, section library, navigation, collections, product pages, cart, privacy and compliance, theme settings, and the changelog.",
+    "The complete Aurelle documentation: style, section library, navigation, collections, product pages, cart, privacy and compliance, theme settings, and the changelog.",
   alternates: { canonical: "/docs" },
 };
 
