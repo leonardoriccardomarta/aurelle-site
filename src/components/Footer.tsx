@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <p className="font-heading text-2xl leading-tight tracking-[0.04em]">Aurelle</p>
           <p className="mt-3 max-w-sm text-[0.9375rem] text-muted">
-            A minimal, high-luxury Shopify theme for premium skincare and beauty brands.
+            A clean, precise Shopify theme for skincare brands.
           </p>
         </div>
 

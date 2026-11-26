@@ -21,7 +21,7 @@ const assistant = Assistant({
 });
 
 const description =
-  "Aurelle is a minimal, high-luxury Shopify theme for premium skincare and beauty brands. Complete on install, in a clean Clinical Skincare style that stays fully editable.";
+  "Aurelle is a clean, precise Shopify theme for skincare brands. Complete on install, in a Clinical Skincare style that stays fully editable.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

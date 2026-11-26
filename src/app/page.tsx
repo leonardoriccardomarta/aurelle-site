@@ -55,8 +55,8 @@ export default function HomePage() {
               For brands that prefer <em className="italic">restraint</em>.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted md:text-xl md:leading-9">
-              Aurelle is a minimal, high-luxury theme. It installs complete and ready to style, in a clean clinical
-              look, and your content stays exactly as you wrote it.
+              Aurelle is a clean, precise theme for skincare. It installs complete, in a clinical look with clear
+              product information first, and your content stays exactly as you wrote it.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link href="/docs" className="btn">

@@ -1,6 +1,6 @@
 # Aurelle: theme documentation
 
-Aurelle is a minimal, high-luxury Online Store 2.0 theme for premium skincare and beauty brands. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
+Aurelle is a clean, precise Online Store 2.0 theme for skincare brands that put clear product information first. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
 
 ## 1. Getting started
 
@@ -17,7 +17,7 @@ The homepage is a neutral base on purpose: its wording works for any skincare br
 |---|---|---|
 | Clinical Skincare | White, cool grey and pastel blue, technical sans-serif, compact spacing | Dermatological and pharmacy-grade skincare |
 
-One alternative homepage layout is included as a template, `index.clinical`, with copy and section order suited to dermatological skincare. Preview it by adding `?view=clinical` to your homepage address. Copy the layout into the default homepage if you want to use it.
+**Technical note: alternate home layout.** `templates/index.clinical.json` is an alternative homepage template, with copy and section order suited to dermatological skincare. It is not a style or preset switcher, and it is not applied automatically: the default homepage stays the neutral one. To preview it, add `?view=clinical` to your homepage address. To use it, copy its sections into the default homepage.
 
 ## 3. Homepage and section library
 
