@@ -8,7 +8,7 @@ import { site } from "@/config/site";
 const included = [
   {
     title: "Homepage and sections",
-    text: `A complete, neutral homepage built from ${sectionCount} sections: hero, autoplay video, collections, image with text, testimonials, before and after, FAQ, journal and more.`,
+    text: `A complete, neutral homepage built from ${sectionCount} sections: hero, autoplay video, collections, image with text, testimonials, image comparison, FAQ, journal and more.`,
   },
   {
     title: "Navigation",
@@ -16,15 +16,15 @@ const included = [
   },
   {
     title: "Collections and products",
-    text: "Native Shopify filters, quick add, swatches, a low-stock warning, trust badges and a frequently-bought-together bundle.",
+    text: "Native Shopify filters on collections and search, quick add, swatches, pickup availability, Shop Pay Installments, a low-stock warning and a frequently-bought-together bundle.",
   },
   {
     title: "Cart",
-    text: "A drawer with free-shipping progress, product suggestions, a discount code field and an order note, without leaving the page.",
+    text: "A drawer with free-shipping progress, product suggestions, the discounts applied and an order note, with accelerated checkout on the cart page.",
   },
   {
     title: "Privacy and compliance",
-    text: "A cookie banner that appears only where consent is required, an optional exit-intent popup, structured data for search engines, and a build toward WCAG 2.1 AA.",
+    text: "Structured data for search engines, a build toward WCAG 2.1 AA, and Shopify's own cookie banner left to do its job.",
   },
   {
     title: "Every page a store needs",
