@@ -3,6 +3,7 @@ import Link from "next/link";
 import { faq, support } from "@/lib/content";
 import { site } from "@/config/site";
 import CopyEmail from "@/components/CopyEmail";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -50,6 +51,9 @@ export default function SupportPage() {
             >
               {site.supportEmail}
             </a>
+            <p className="mt-4 text-[0.9375rem] text-muted">
+              No mail app? <a className="link" href="#contact-form">Use the contact form</a>.
+            </p>
           </div>
           <div className="lg:col-span-5 lg:text-right">
             <CopyEmail email={site.supportEmail} />
@@ -114,6 +118,28 @@ export default function SupportPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------------------------------ contact form */}
+      <section id="contact-form" aria-labelledby="contact-title" className="border-t border-line py-12 md:py-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-5">
+            <h2 id="contact-title" className="max-w-[16ch]">
+              Send us a message
+            </h2>
+            <p className="mt-6 max-w-sm text-muted">
+              Write to us from here, with no mail app needed. {support.responseTime}, {support.hours}.
+            </p>
+          </div>
+          <div className="min-w-0 lg:col-span-7">
+            <ContactForm email={site.supportEmail} />
+            <noscript>
+              <p className="text-muted">
+                The form needs JavaScript. You can write to us at <a className="link" href={mailto}>{site.supportEmail}</a>.
+              </p>
+            </noscript>
+          </div>
         </div>
       </section>
 

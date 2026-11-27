@@ -45,6 +45,20 @@ Everything that depends on the real domain and support address lives in **one fi
 
 The URL feeds the canonical URLs, Open Graph metadata, `sitemap.xml` and `robots.txt`.
 
+## Support form
+
+`/support` has a contact form that sends its messages to the support mailbox. The browser posts to `/api/contact`
+(`src/app/api/contact/route.ts`), which validates the fields, blocks simple spam (a hidden field, a minimum fill time,
+a same-origin check and a per-visitor limit) and sends the email through [Resend](https://resend.com).
+
+To switch it on, set these in Vercel (Project Settings, Environment Variables) and redeploy; see `.env.example`:
+
+- `RESEND_API_KEY`: an API key from Resend.
+- `CONTACT_FROM`: the sender, for example `Mirel support <support@aurelletheme.com>`. Verify the domain in Resend first.
+- `CONTACT_TO` (optional): defaults to the support address in `src/config/site.ts`.
+
+Until the key is set, the form answers that it is unavailable and points visitors to the email address.
+
 ## Deploy to Vercel
 
 1. Push this folder to its own Git repository.
