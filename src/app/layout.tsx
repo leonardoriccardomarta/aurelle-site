@@ -21,23 +21,23 @@ const assistant = Assistant({
 });
 
 const description =
-  "Aurelle is a clean, precise Shopify theme for skincare brands. Complete on install, in a Clinical Skincare style that stays fully editable.";
+  "Mirel is a clean, precise Shopify theme for skincare brands. Complete on install, in a Clinical Skincare style that stays fully editable.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Aurelle: a Shopify theme for skincare and beauty",
-    template: "%s | Aurelle",
+    default: "Mirel: a Shopify theme for skincare and beauty",
+    template: "%s | Mirel",
   },
   description,
   applicationName: site.name,
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: "Aurelle: a Shopify theme for skincare and beauty",
+    title: "Mirel: a Shopify theme for skincare and beauty",
     description,
   },
-  twitter: { card: "summary", title: "Aurelle", description },
+  twitter: { card: "summary", title: "Mirel", description },
 };
 
 export const viewport: Viewport = {

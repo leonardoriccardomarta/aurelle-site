@@ -1,6 +1,6 @@
-# Aurelle – documentation and support site
+# Mirel – documentation and support site
 
-Landing page, documentation and support for the **Aurelle** Shopify theme (Aurelle Studio).
+Landing page, documentation and support for the **Mirel** Shopify theme (Aurelle Studio).
 Next.js (App Router) · TypeScript · Tailwind CSS. Every page is prerendered as static HTML, with no demo-store links.
 
 The art direction of the site: cream and black, Cormorant Garamond headings, Assistant body,

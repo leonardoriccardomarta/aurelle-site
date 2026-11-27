@@ -5,7 +5,7 @@ import { docs } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "The complete Aurelle documentation: style, section library, navigation, collections, product pages, cart, privacy and compliance, theme settings, and the changelog.",
+    "The complete Mirel documentation: style, section library, navigation, collections, product pages, cart, privacy and compliance, theme settings, and the changelog.",
   alternates: { canonical: "/docs" },
 };
 
@@ -18,7 +18,7 @@ export default function DocsPage() {
         <p className="eyebrow">Documentation &middot; Version {docs.latestVersion}</p>
         <h1 className="mt-4 text-[clamp(2.5rem,1.2rem+5.5vw,5.5rem)] leading-[1.05]">Documentation</h1>
         <p className="mt-6 max-w-xl text-lg text-muted">
-          Everything Aurelle does, section by section. Search below, or follow the contents.
+          Everything Mirel does, section by section. Search below, or follow the contents.
         </p>
       </header>
 

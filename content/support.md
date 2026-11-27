@@ -1,6 +1,6 @@
 # Support
 
-Direct, human support for every Aurelle customer.
+Direct, human support for every Mirel customer.
 
 ## How to get help
 

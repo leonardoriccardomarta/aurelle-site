@@ -1,6 +1,6 @@
-# Aurelle: theme documentation
+# Mirel: theme documentation
 
-Aurelle is a clean, precise Online Store 2.0 theme for skincare brands that put clear product information first. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
+Mirel is a clean, precise Online Store 2.0 theme for skincare brands that put clear product information first. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
 
 ## 1. Getting started
 
@@ -67,6 +67,7 @@ Product page blocks can be reordered or removed in the editor:
 - **Ingredients and How to use accordions:** fill the product metafields `custom.ingredients` and `custom.how_to_use`, or type the content into the block.
 - **Frequently bought together and You may also like:** the **Product recommendations** sections use Shopify's recommendations. Set complementary products in Search and Discovery. If there are none, the section stays empty and invisible.
 - **Sticky add to cart** on phones, and dynamic checkout buttons (shown if enabled in your payment settings). Shopify draws these buttons and the theme never changes their colors.
+- **Selling plans:** products sold with subscriptions or prepaid plans show a **Purchase options** choice: one-time purchase (unless the product can only be bought with a plan) or one of the available plans, with its price, saving and price per delivery. The options follow the selected variant, and the plan chosen shows on the cart line. Plans are created in Shopify, with a selling plan app.
 - **Shop Pay Installments:** the banner appears under the buy buttons wherever Shopify offers installments for the product.
 - **Pickup availability:** shows whether the selected variant can be picked up at your locations, and updates when the variant changes. It appears once local pickup is set up in your store.
 - **Gift cards:** a gift card product offers "send as a gift" with the recipient email and name, a message and an optional send date.

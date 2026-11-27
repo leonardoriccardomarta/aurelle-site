@@ -55,7 +55,7 @@ export default function HomePage() {
               For brands that prefer <em className="italic">restraint</em>.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted md:text-xl md:leading-9">
-              Aurelle is a clean, precise theme for skincare. It installs complete, in a clinical look with clear
+              Mirel is a clean, precise theme for skincare. It installs complete, in a clinical look with clear
               product information first, and your content stays exactly as you wrote it.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -85,7 +85,7 @@ export default function HomePage() {
           <p className="eyebrow lg:col-span-3">01 &mdash; The theme</p>
           <div className="lg:col-span-9">
             <h2 id="approach-title" className="max-w-[26ch] text-[clamp(1.75rem,1.1rem+2.6vw,3.25rem)] leading-[1.18]">
-              Aurelle installs complete. A neutral homepage, a considered footer and journal posts are in place before
+              Mirel installs complete. A neutral homepage, a considered footer and journal posts are in place before
               the first product is added.
             </h2>
             <p className="mt-8 max-w-2xl text-lg text-muted">

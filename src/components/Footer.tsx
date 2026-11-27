@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="mt-auto border-t border-line bg-surface">
       <div className="page-width grid gap-10 py-12 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)] md:py-16">
         <div>
-          <p className="font-heading text-2xl leading-tight tracking-[0.04em]">Aurelle</p>
+          <p className="font-heading text-2xl leading-tight tracking-[0.04em]">Mirel</p>
           <p className="mt-3 max-w-sm text-[0.9375rem] text-muted">
             A clean, precise Shopify theme for skincare brands.
           </p>

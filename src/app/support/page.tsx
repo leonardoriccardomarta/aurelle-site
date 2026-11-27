@@ -6,7 +6,7 @@ import CopyEmail from "@/components/CopyEmail";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: `Direct, human support for every Aurelle customer. ${support.responseTime}, ${support.hours}.`,
+  description: `Direct, human support for every Mirel customer. ${support.responseTime}, ${support.hours}.`,
   alternates: { canonical: "/support" },
 };
 
@@ -31,7 +31,7 @@ const facts = [
 ];
 
 export default function SupportPage() {
-  const mailto = `mailto:${site.supportEmail}?subject=${encodeURIComponent("Aurelle support")}`;
+  const mailto = `mailto:${site.supportEmail}?subject=${encodeURIComponent("Mirel support")}`;
 
   return (
     <div className="page-width pb-[var(--section)]">
