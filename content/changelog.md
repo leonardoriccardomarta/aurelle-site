@@ -4,7 +4,7 @@
 
 Initial public release.
 
-- Clinical Skincare style (white, cool grey and pastel blue, technical sans-serif), plus an alternative homepage layout.
+- Mirel style (white, cool grey and pastel blue, technical sans-serif), plus an alternative homepage layout.
 - Neutral, complete default homepage, footer and sample journal posts.
 - Collection filters with active-filter chips, quick add, and product swatches, low-stock warning, trust badges and cross-sell on product pages.
 - Cart drawer and cart page with free shipping progress, product suggestions, applied discounts, order note, tax note and accelerated checkout buttons on the cart page.

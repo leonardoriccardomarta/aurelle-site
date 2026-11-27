@@ -8,7 +8,7 @@ hairline borders, sharp corners, generous whitespace.
 
 | Route      | What it is                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------------ |
-| `/`        | Editorial landing: the theme, what is included, the Clinical Skincare style, links to docs / support |
+| `/`        | Editorial landing: the theme, what is included, the Mirel style, links to docs / support |
 | `/docs`    | Full documentation, sticky sidebar, scroll-spy, search, changelog at the bottom            |
 | `/support` | Email, hours, response time, what is and is not covered, FAQ                               |
 

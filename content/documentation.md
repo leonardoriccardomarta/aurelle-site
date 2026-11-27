@@ -1,11 +1,11 @@
 # Mirel: theme documentation
 
-Mirel is a clean, precise Online Store 2.0 theme for skincare brands that put clear product information first. It installs with a complete, neutral homepage and footer, styled in the Clinical Skincare look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
+Mirel is a clean, precise Online Store 2.0 theme for skincare brands that put clear product information first. It installs with a complete, neutral homepage and footer, styled in the Mirel look: white, cool grey and pastel blue, with a technical sans-serif and compact spacing.
 
 ## 1. Getting started
 
 1. Add the theme to your store (upload the theme file, or install it from the Theme Store) and open **Customize**.
-2. The theme installs with the Clinical Skincare style already applied. To adjust the colors, fonts, buttons, corners or spacing, open Theme settings (see "Theme settings" below). Changing the style never changes your content.
+2. The theme installs with the Mirel style already applied. To adjust the colors, fonts, buttons, corners or spacing, open Theme settings (see "Theme settings" below). Changing the style never changes your content.
 3. Add your logo, then replace the placeholder images in the homepage sections.
 4. Check your navigation menus (see "Navigation") and the sections listed in "Before you launch" at the end of this page.
 
@@ -15,9 +15,9 @@ The homepage is a neutral base on purpose: its wording works for any skincare br
 
 | Style | Look | Best for |
 |---|---|---|
-| Clinical Skincare | White, cool grey and pastel blue, technical sans-serif, compact spacing | Dermatological and pharmacy-grade skincare |
+| Mirel | White, cool grey and pastel blue, technical sans-serif, compact spacing | Dermatological and pharmacy-grade skincare |
 
-**Technical note: alternate home layout.** `templates/index.clinical.json` is an alternative homepage template, with copy and section order suited to dermatological skincare. It is not a style or preset switcher, and it is not applied automatically: the default homepage stays the neutral one. To preview it, add `?view=clinical` to your homepage address. To use it, copy its sections into the default homepage.
+**Technical note: alternate home layout.** The theme package includes one alternative homepage template, `templates/index.clinical.json` (the name refers to its clinical tone, not to a preset), with copy and section order suited to dermatological skincare. It is not a style or preset switcher, and it is not applied automatically: the default homepage stays the neutral one. To preview it, add `?view=clinical` to your homepage address. To use it, copy its sections into the default homepage.
 
 ## 3. Homepage and section library
 

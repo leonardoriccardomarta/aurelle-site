@@ -2,11 +2,11 @@ import { styleRows } from "@/lib/content";
 
 /**
  * Visual identity of the theme's style. The hex values and typeface names are copied from the theme's preset file
- * (presets/clinical.json); the description and target niche come from the documentation table, so the landing page
+ * (presets/clinical.json, the Mirel preset); the description and target niche come from the documentation table, so the landing page
  * can never disagree with the docs.
  */
 const identity: Record<string, { typefaces: string; palette: { name: string; hex: string }[] }> = {
-  "Clinical Skincare": {
+  "Mirel": {
     typefaces: "IBM Plex Sans and Inter",
     palette: [
       { name: "Background", hex: "#FFFFFF" },

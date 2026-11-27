@@ -21,7 +21,7 @@ const assistant = Assistant({
 });
 
 const description =
-  "Mirel is a clean, precise Shopify theme for skincare brands. Complete on install, in a Clinical Skincare style that stays fully editable.";
+  "Mirel is a clean, precise Shopify theme for skincare brands. Complete on install, in the Mirel style, fully editable.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
